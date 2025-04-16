@@ -1,17 +1,48 @@
 package Tasks;
 
-public class Task10_MethodOverriding
-{
-    class Trainer {
-        void conductClass() {
-            System.out.println("Trainer conducts a general class.");
-        }
+// Parent class
+class Bank {
+    double getRateOfInterest() {
+        return 0; // Default rate
     }
+}
 
-    class SeleniumTrainer extends Trainer {
-        @Override
-        void conductClass() {
-            System.out.println("SeleniumTrainer conducts Selenium session.");
-        }
+// Child class 1
+class SBI extends Bank {
+    @Override
+    double getRateOfInterest() {
+        return 6.5;
+    }
+}
+
+// Child class 2
+class HDFC extends Bank {
+    @Override
+    double getRateOfInterest() {
+        return 7.0;
+    }
+}
+
+// Child class 3
+class ICICI extends Bank {
+    @Override
+    double getRateOfInterest() {
+        return 6.75;
+    }
+}
+
+// Main class to test
+public class Task10_MethodOverriding {
+    public static void main(String[] args) {
+        Bank bank;
+
+        bank = new SBI();
+        System.out.println("SBI Interest Rate: " + bank.getRateOfInterest() + "%");
+
+        bank = new HDFC();
+        System.out.println("HDFC Interest Rate: " + bank.getRateOfInterest() + "%");
+
+        bank = new ICICI();
+        System.out.println("ICICI Interest Rate: " + bank.getRateOfInterest() + "%");
     }
 }

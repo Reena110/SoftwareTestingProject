@@ -10,7 +10,7 @@ public class Lab260_Map_P1 {
         Map m1 = new HashMap();
         // Map is key and value pair
         // name -> Reena
-        m1.put("name","Reena");
+        m1.put("name","Reena")  ;
         m1.put("rollno",1);
         m1.put("phone",987654321);
         System.out.println(m1);

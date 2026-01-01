@@ -1,6 +1,7 @@
 package Practice_Java;
 
-public class Palindrome_number
+public class
+Palindrome_number
 {
     public static void main(String args[])
     {
